@@ -23,7 +23,7 @@ export class LineChartComponent implements OnInit {
           ['mois', 'Cas confirmés ', 'Negative tests', 'Retablis','Décédés'],         
         ];
         data1['features'].forEach(eliment => {
-          array.push([eliment['properties'].Date, eliment['properties']
+          array.push([this.convert(eliment['properties'].Date), eliment['properties']
             .Retablis, eliment['properties'].Negative_tests,
             eliment['properties']
               .Cas_confirmés, eliment['properties']
@@ -40,6 +40,11 @@ export class LineChartComponent implements OnInit {
         chart.draw(data);
       });
     let chart = new this.gLib.visualization.LineChart(document.getElementById('divLineChart'));
+  }
+   convert(str) {
+    var date = new Date(str),
+      mnth = ("0" + (date.getMonth() + 1)).slice(-2);
+    return mnth;
   }
 
 }
