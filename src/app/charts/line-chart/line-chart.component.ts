@@ -20,13 +20,15 @@ export class LineChartComponent implements OnInit {
     this.chartsService.getCovidData()
       .subscribe(data1 => {
         let array = [
-          ['mois', 'Cas confirmés ', 'Décédés', 'Retablis'],         
+          ['mois', 'Cas confirmés ', 'Negative tests', 'Retablis','Décédés'],         
         ];
         data1['features'].forEach(eliment => {
           array.push([eliment['properties'].Date, eliment['properties']
-            .Retablis, eliment['properties'].Décédés,
+            .Retablis, eliment['properties'].Negative_tests,
             eliment['properties']
-              .Cas_confirmés])
+              .Cas_confirmés, eliment['properties']
+              .Décédés]
+              )
         });
         for (let i = 0; i < array.length; i++) {
           this.dataCovid.push(array[i]);

@@ -13,9 +13,6 @@ export class MonthlyChartComponent implements OnInit {
     let chart = new CanvasJS.Chart("chartContainer", {
       animationEnabled: true,
       exportEnabled: true,
-      title: {
-        text: "api mafihch les regs danc man9darch nkhdem chart"
-      },
       data: [{
         type: "column",
         dataPoints: [

@@ -35,7 +35,7 @@ export class PieChartComponent implements OnInit {
         data.addRows([
           ['Cas confirmés', this.dataCovid['Cas_confirmés']],
           ['Décédés', this.dataCovid['Décédés']],
-          ['Negative_tests', this.dataCovid['Negative_tests']]
+          ['Retablis', this.dataCovid['Retablis']]
          
 
     ]);

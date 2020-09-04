@@ -31,7 +31,7 @@ export class SimpleChartComponent implements OnInit {
       for (let i = 0; i < array.length - 1; i++) {
         this.dataCovid.push(array[i]);
       }
-      console.log(this.dataCovid);
+      // console.log(this.dataCovid);
     })
   
   }
