@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
-import { HttpClient } from '@angular/common/http';
 import { ChartsService } from '../service/charts.service';
 @Component({
   selector: 'app-map-chart',

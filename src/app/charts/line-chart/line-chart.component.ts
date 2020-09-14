@@ -24,9 +24,9 @@ export class LineChartComponent implements OnInit {
         ];
         data1['features'].forEach(eliment => {
           array.push([this.convert(eliment['properties'].Date), eliment['properties']
-            .Retablis, eliment['properties'].Negative_tests,
+            .Cas_confirmés, eliment['properties'].Negative_tests,
           eliment['properties']
-            .Cas_confirmés, eliment['properties']
+            .Retablis, eliment['properties']
             .Décédés]
           )
         });
@@ -56,33 +56,43 @@ export class LineChartComponent implements OnInit {
       }
       case "03": {
         return ["mar", day].join(" ");
+        break;
       }
       case "04": {
         return ["apr", day].join(" ");
+        break;
       }
       case "05": {
         return ["may", day].join(" ");
+        break;
       }
       case "06": {
         return ["jun", day].join(" ");
+        break;
       }
       case "07": {
         return ["jul", day].join(" ");
+        break;
       }
       case "08": {
         return ["aug", day].join(" ");
+        break;
       }
       case "09": {
         return ["sep", day].join(" ");
+        break;
       }
       case "10": {
         return ["oct", day].join(" ");
+        break;
       }
       case "11": {
         return ["nov", day].join(" ");
+        break;
       }
       case "12": {
         return ["dec", day].join(" ");
+        break;
       }
 
 
